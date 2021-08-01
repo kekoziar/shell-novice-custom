@@ -47,5 +47,5 @@ she'll have to select and open a file 1520 times.
 If `goostats.sh` takes 30 seconds to run each file, the whole process will take more than 12 hours of Nelle's attention.
 With the shell, Nelle can instead write a script so her computer will complete this mundane task while she focuses her attention on writing her paper.  As a bonus, once she has written her script and workflow, she will be able to use it again whenever she collects more data.
 
-So, let's get started. 
+So, let's get started by opening our shell program.  I'm going to open Git-Bash on my windows machine; if you're using a mac, you can type "terminal" to open the terminal.
 
