@@ -185,15 +185,15 @@ are plain old **files**.
 ### Getting help
 
 `ls` has lots of other **options**. There are two common ways to find out how
-to use a command and what options it accepts:
+to use a command and what options it accepts.  Depending on your environment, you might find that only one of these commands works.
 
-1. We can pass a `--help` option to the command, such as:
+1. In git-bash and on linux, we can pass a `--help` option to the command, such as:
     ~~~
     $ ls --help
     ~~~
     {: .language-bash}
 
-2. We can read its manual with `man`, such as:
+2. If you're using a Mac, you can read the command's manual page with `man`, such as:
     ~~~
     $ man ls
     ~~~
@@ -260,6 +260,7 @@ Mandatory arguments to long options are mandatory for short options, too.
 > {: .error}
 {: .callout}
 
+
 #### The `man` command
 
 The other way to learn about `ls` is to type
@@ -282,6 +283,7 @@ To **quit** the `man` pages, press <kbd>Q</kbd>.
 
 > ## Manual pages on the web
 >
+> My personal favorite is a website that provides command line reference for many operating systems: https://ss64.com/
 > Of course, there is a third way to access help for commands:
 > searching the internet via your web browser.
 > When using internet search, including the phrase `unix man page` in your search
@@ -292,6 +294,10 @@ To **quit** the `man` pages, press <kbd>Q</kbd>.
 > [core GNU utilities](http://www.gnu.org/software/coreutils/manual/coreutils.html),
 > which covers many commands introduced within this lesson.
 {: .callout}
+
+
+
+
 
 > ## Exploring More `ls` Flags
 >
