@@ -27,19 +27,19 @@ key points:
 - "`..` means 'the directory above the current one'; `.` on its own means 'the current directory'."
 ---
 
-The part of the operating system responsible for managing files and directories
-is called the **file system**.
-It organizes our data into files,
-which hold information,
-and directories (also called 'folders'),
-which hold files or other directories.
+When the shell is first opened, you are presented with a **prompt**,
+indicating that the shell is waiting for input.
 
-Several commands are frequently used to create, inspect, rename, and delete files and directories.
-To start exploring them, we'll go to our open shell window.
+~~~
+$
+~~~
+{: .language-bash}
 
-First, let's find out where we are by running a command called `pwd`
+The shell typically uses the dollar sign as the prompt, but you might have a different symbol. And, this prompt is followed by a typically blinking, but sometimes solid text cursor.  In my case, it is a blinking underscore.
+
+The first command we're going to run is `pwd`
 (which stands for 'print working directory'). Directories are like *places* — at any time
-while we are using the shell, we are in exactly one place called
+while we are using the shell, we are in exactly one place which is called
 our **current working directory**. Commands mostly read and write files in the
 current working directory, i.e. 'here', so knowing where you are before running
 a command is important. `pwd` shows you where you are:
