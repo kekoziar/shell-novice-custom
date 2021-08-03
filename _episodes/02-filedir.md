@@ -76,20 +76,13 @@ which is Nelle's **home directory**:
 > on the `cd` command.
 
 To understand what a 'home directory' is,
-let's have a look at how the file system as a whole is organized.  For the
-sake of this example, we'll be
-illustrating the filesystem on our scientist Nelle's computer.  After this
-illustration, you'll be learning commands to explore your own filesystem,
-which will be constructed in a similar way, but not be exactly identical.
+let's have a look at how the file system as a whole is organized.  
 
-On Nelle's computer, the filesystem looks like this:
-
-![The file system is made up of a root directory that contains sub-directories
-titled bin, data, users, and tmp](../fig/filesystem.svg)
+On my computer, the filesystem looks like this: (switch to windows explorer)
 
 At the top is the **root directory**
 that holds everything else.
-We refer to it using a slash character, `/`, on its own;
+Some representations will refer to the root directory using a slash character, `/`, on its own;
 this character is the leading slash in `/Users/nelle`.
 
 Inside that directory are several other directories:

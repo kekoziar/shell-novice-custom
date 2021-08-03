@@ -75,39 +75,6 @@ creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.
 ~~~
 {: .output}
 
-Since we've just created the `thesis` directory, there's nothing in it yet:
-
-~~~
-$ ls -F thesis
-~~~
-{: .language-bash}
-
-Note that `mkdir` is not limited to creating single directories one at a time.
-The `-p` option allows `mkdir` to create a directory with nested subdirectories in a single operation:
-
-~~~
-$ mkdir -p project/data project/results
-~~~
-{: .language-bash}
-
-The `-R` option to the `ls` command will list all nested subdirectories within a directory.
-Let's use `ls -FR` to recursively list the new directory hierarchy we just created in the `project` directory:
-
-~~~
-$ ls -FR project
-~~~
-{: .language-bash}
-
-~~~
-project/:
-data/  results/
-
-project/data:
-
-project/results:
-~~~
-{: .output}
-
 > ## Two ways of doing the same thing
 > Using the shell to create a directory is no different than using a file explorer.
 > If you open the current directory using your operating system's graphical file explorer,
@@ -354,81 +321,61 @@ $
 ~~~
 {: .output}
 
-Alternatively, we can confirm the file `quotes.txt` is no longer present in the `thesis` directory
-by explicitly trying to list it:
+Now, say you want to see only text files in your current directory.  You would do that by using 
+a wildcard character, the astrisk (\*).  The astrisk represents zero to an infinite 
+numbers of characters. 
 
 ~~~
-$ ls thesis/quotes.txt
+$ ls *.txt
 ~~~
 {: .language-bash}
 
 ```
-ls: cannot access 'thesis/quotes.txt': No such file or directory
+notes.txt  quotes.txt
 ```
 {: .output}
 
-`ls` with a filename or directory as an argument only lists the requested file or directory.
-If the file given as the argument doesn't exist, the shell returns an error as we saw above.
-We can use this to see that `quotes.txt` is now present in our current directory:
+And so in that way, we can check for a certain type of file. 
 
-~~~
-$ ls quotes.txt
-~~~
-{: .language-bash}
-
-~~~
-quotes.txt
-~~~
-{: .output}
-
-> ## Moving Files to a new folder
->
-> After running the following commands,
-> Jamie realizes that she put the files `sucrose.dat` and `maltose.dat` into the wrong folder.
-> The files should have been placed in the `raw` folder.
->
-> ~~~
-> $ ls -F
->  analyzed/ raw/
-> $ ls -F analyzed
-> fructose.dat glucose.dat maltose.dat sucrose.dat
-> $ cd analyzed
-> ~~~
-> {: .language-bash}
->
-> Fill in the blanks to move these files to the `raw/` folder
-> (i.e. the one she forgot to put them in)
->
-> ~~~
-> $ mv sucrose.dat maltose.dat ____/____
-> ~~~
-> {: .language-bash}
-> > ## Solution
-> > ```
-> > $ mv sucrose.dat maltose.dat ../raw
-> > ```
-> > {: .language-bash}
-> > Recall that `..` refers to the parent directory (i.e. one above the current directory)
-> > and that `.` refers to the current directory.
-> {: .solution}
-{: .challenge}
 
 ## Copying files and directories
 
-The `cp` command works very much like `mv`,
-except it copies a file instead of moving it.
-We can check that it did the right thing using `ls`
-with two paths as arguments --- like most Unix commands,
-`ls` can be given multiple paths at once:
+Now, say we were looking at our current folder, and realized 
+we made a folder very similar to an existing folder.
 
 ~~~
-$ cp quotes.txt thesis/quotations.txt
-$ ls quotes.txt thesis/quotations.txt
+$ ls -F
 ~~~
 {: .language-bash}
 
 ~~~
-quotes.txt   thesis/quotations.txt
+creatures/  molecules/           notes.txt  quotes.txt  thesis/
+data/       north-pacific-gyre/  pizza.cfg  solar.pdf   writing/
+~~~
+{: .output}
+
+The writing folder!
+
+~~~
+$ ls -F writing
+~~~
+{: .language-bash}
+
+~~~
+data/  haiku.txt  thesis/  tools/
+~~~
+{: .output}
+
+So, let's copy our `quotes.txt` file into the `writing/thesis` folder
+
+~~~
+$ cp quotes.txt writing/thesis/quotations.txt
+$ ls quotes.txt writing/thesis/quotations.txt
+~~~
+{: .language-bash}
+
+~~~
+quotes.txt   writing/thesis/quotations.txt
 ~~~
 {: .output}
 
@@ -437,14 +384,14 @@ We can also copy a directory and all its contents by using the
 e.g. to back up a directory:
 
 ```
-$ cp -r thesis thesis_backup
+$ cp -r writing/thesis thesis_backup
 ```
 {: .language-bash}
 
 We can check the result by listing the contents of both the `thesis` and `thesis_backup` directory:
 
 ```
-$ ls thesis thesis_backup
+$ ls writing/thesis thesis_backup
 ```
 {: .language-bash}
 
