@@ -1,6 +1,6 @@
 ---
 title: "Working With Files and Directories"
-teaching: 30
+teaching: 25
 exercises: 20
 questions:
 - "How can I create, copy, and delete files and directories?"
@@ -341,7 +341,7 @@ And so in that way, we can check for a certain type of file.
 ## Copying files and directories
 
 Now, say we were looking at our current folder, and realized 
-we made a folder very similar to an existing folder.
+the `thesis` folder we made is very similar to an existing folder.
 
 ~~~
 $ ls -F
@@ -354,7 +354,7 @@ data/       north-pacific-gyre/  pizza.cfg  solar.pdf   writing/
 ~~~
 {: .output}
 
-The writing folder!
+The writing folder!  Let's take a look at what's in that folder.
 
 ~~~
 $ ls -F writing
@@ -366,7 +366,7 @@ data/  haiku.txt  thesis/  tools/
 ~~~
 {: .output}
 
-So, let's copy our `quotes.txt` file into the `writing/thesis` folder
+Sure enough, there's a `thesis` folder.  Let's copy our `quotes.txt` file into the `writing/thesis` folder.
 
 ~~~
 $ cp quotes.txt writing/thesis/quotations.txt
