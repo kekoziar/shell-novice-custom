@@ -597,6 +597,7 @@ so that you and other people can put those programs into pipes to multiply their
 
 ## Nelle's Pipeline: Checking Files
 
+Now, let's see how the commands that we've learned can help Nelle with her files. 
 Nelle has run her samples through the assay machines
 and created 17 files in the `north-pacific-gyre/2012-07-03` directory described earlier.
 As a quick check, starting from her home directory, Nelle types:
